@@ -58,7 +58,7 @@ class AddUser extends React.PureComponent {
   onChange = value => {
     this.setState({
       value,
-    });    
+    });
   };
 
   handleAddUser = () => {
@@ -74,7 +74,7 @@ class AddUser extends React.PureComponent {
       localStorage.setItem('user', JSON.stringify(data));
 
       this.props.addUsers(data);
-      this.props.history.push("/user")
+      this.props.history.push('/user');
     }
   };
 
@@ -82,7 +82,13 @@ class AddUser extends React.PureComponent {
     return (
       <s.FormContainer>
         <h2>Add User</h2>
-        <Form ref={form => (this.form = form)} type={newUser} options={options} value={this.state.values} onChange={this.handleChange}/>
+        <Form
+          ref={form => (this.form = form)}
+          type={newUser}
+          options={options}
+          value={this.state.values}
+          onChange={this.handleChange}
+        />
         <button onClick={this.handleAddUser}>Add User</button>
       </s.FormContainer>
     );

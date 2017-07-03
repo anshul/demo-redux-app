@@ -12,7 +12,7 @@ const UserInfo = props => {
           <p>{`Name:`}{user.name}</p>
           <p>{`Surname: `}{user.surname}</p>
           <p>{`Age: `}{user.age}</p>
-          <p>{`Gender: `}{user.gender === 'M' ? 'Male' : 'Female' }</p>
+          <p>{`Gender: `}{user.gender === 'M' ? 'Male' : 'Female'}</p>
         </div>,
       )}
     </div>
