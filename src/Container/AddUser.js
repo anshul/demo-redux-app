@@ -71,10 +71,10 @@ class AddUser extends React.PureComponent {
         gender: value.gender,
       };
 
-      localStorage.setItem('user', JSON.stringify(data));
-
       this.props.addUsers(data);
       this.props.history.push('/user');
+    } else {
+      alert('All feilds are mandatory,except surname');
     }
   };
 
@@ -82,13 +82,7 @@ class AddUser extends React.PureComponent {
     return (
       <s.FormContainer>
         <h2>Add User</h2>
-        <Form
-          ref={form => (this.form = form)}
-          type={newUser}
-          options={options}
-          value={this.state.values}
-          onChange={this.handleChange}
-        />
+        <Form ref={form => (this.form = form)} type={newUser} options={options} value={this.state.values} onChange={this.handleChange} />
         <button onClick={this.handleAddUser}>Add User</button>
       </s.FormContainer>
     );
@@ -97,8 +91,9 @@ class AddUser extends React.PureComponent {
 
 AddUser.propTypes = {
   addUsers: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
-const selector = state => ({ Users: state.config.Users });
+const selector = state => ({ users: state.config.users });
 
 export default connect(selector, { addUsers })(AddUser);

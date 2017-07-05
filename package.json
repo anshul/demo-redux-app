@@ -6,14 +6,21 @@
     "node": ">=7.6.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
-    "react": "^15.6.0",
-    "react-dom": "^15.6.0",
+    "react": "^15.6.1",
+    "react-axios": "^1.0.2",
+    "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "redux": "^3.6.0",
+    "react-router-redux": "^4.0.8",
+    "react-transition-group": "^1.2.0",
+    "redux": "^3.7.0",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^2.0.1",
+    "styled-components": "^2.1.0",
+    "tcomb": "^3.2.21",
     "tcomb-form": "^0.9.17"
   },
   "devDependencies": {
@@ -24,7 +31,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-prettier": "^2.1.1",
     "eslint-plugin-react": "^7.0.1",
-    "prettier": "^1.4.4",
+    "prettier": "^1.5.2",
     "react-scripts": "1.0.7"
   },
   "scripts": {
@@ -32,7 +39,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "lint": "eslint src",
-    "fix": "eslint --fix src",
-    "q": "eslint --quiet --fix src/index.js $(git diff --cached --name-only --diff-filter=d HEAD | grep .js$)"
+    "fix": "eslint --fix src"
   }
 }

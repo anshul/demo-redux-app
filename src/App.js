@@ -6,9 +6,14 @@ import Container from './Container';
 import Home from './Container/Home';
 import AddUser from './Container/AddUser';
 import UserInfo from './Container/UserInfo';
-// import s from './appStyles'
+import TodoApp from './Container/TodoApp/TodoApp';
 
-import store from './store';
+// import s from './appStyles'
+import { configureStore } from './store';
+
+const store = configureStore();
+
+console.log(store.getState());
 
 const App = () =>
   <Provider store={store}>
@@ -18,6 +23,7 @@ const App = () =>
           <Route path="/" exact component={Home} />
           <Route path="/add-user" component={AddUser} />
           <Route path="/user" component={UserInfo} />
+          <Route path="/todo" component={TodoApp} />
           <Route component={() => <h1>Not found</h1>} />
         </Switch>
       </Container>
