@@ -55,7 +55,7 @@ AddTodo.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       age: PropTypes.number.isRequired,
-      gender: PropTypes.arrayOf(['Male', 'Female']),
+      gender: PropTypes.oneOf(['M', 'F']),
     }).isRequired,
   ).isRequired,
 };

@@ -1,31 +1,3 @@
-// import _ from 'lodash';
-
-// const getLocalstorageTodos = localStorage.getItem('state');
-
-// const localTodos = JSON.parse(getLocalstorageTodos);
-
-// const initialState = localTodos.todos.todos || [];
-// console.log(initialState);
-
-// const initialState = [
-//   {
-//     id: _.uniqueId(),
-//     text: 'watch india vs south africa',
-//     completed: false,
-//   },
-//   {
-//     id: _.uniqueId(),
-//     text: 'lunch',
-//     completed: true,
-//   },
-//   {
-//     id: _.uniqueId(),
-//     text: 'Afternoon sleep',
-//     completed: true,
-//   },
-// ];
-
-// console.log(initialState);
 const initialState = [];
 
 const todos = (state = initialState || [], action) => {

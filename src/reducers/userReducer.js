@@ -1,14 +1,12 @@
 import types from '../action_types';
 
-const initialState = {
-  users: [],
-};
+const initialState = [];
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case types.ADD_USER: {
       return [
-        ...state.users,
+        ...state,
         {
           name: action.payload.data.name,
           surname: action.payload.data.surname,
